@@ -1,0 +1,28 @@
+{
+  "name": "genesis-exoskeleton",
+  "description": "a Genesis Child starter theme based on the sample theme created for the Genesis Framework",
+  "main": "index.js",
+  "authors": [
+    "Nate Finch"
+  ],
+  "license": "GPL-2.0",
+  "keywords": [
+    "genesis",
+    "starter",
+    "build",
+    "tools",
+    "scss",
+    "grunt",
+    "bower"
+  ],
+  "homepage": "https://github.com/n8finch/genesis-exoskeleton",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
