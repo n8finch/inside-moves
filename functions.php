@@ -128,6 +128,11 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is the featured area right side.', 'CHILD_THEME_NAME' ),
 ) );
 genesis_register_sidebar( array(
+	'id'          => 'home-featured-trailer',
+	'name'        => __( 'Home Featured Trailer', 'CHILD_THEME_NAME' ),
+	'description' => __( 'This is the featured area if you want full width.', 'CHILD_THEME_NAME' ),
+) );
+genesis_register_sidebar( array(
 	'id'          => 'home-middle-1',
 	'name'        => __( 'Home Middle 1', 'CHILD_THEME_NAME' ),
 	'description' => __( 'This is the home middle left area.', 'CHILD_THEME_NAME' ),
@@ -143,7 +148,26 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is the home middle right area.', 'CHILD_THEME_NAME' ),
 ) );
 genesis_register_sidebar( array(
+	'id'          => 'home-reviews',
+	'name'        => __( 'Home Reviews', 'CHILD_THEME_NAME' ),
+	'description' => __( 'This is the home reviews area.', 'CHILD_THEME_NAME' ),
+) );
+genesis_register_sidebar( array(
 	'id'          => 'after-entry',
 	'name'        => __( 'After Entry', 'CHILD_THEME_NAME' ),
 	'description' => __( 'This is the after entry area.', 'CHILD_THEME_NAME' ),
 ) );
+
+
+//Reposition the primary nav menu
+
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_before_header', 'genesis_do_nav' );
+
+
+//* Change the footer text
+add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');
+function sp_footer_creds_filter( $creds ) {
+	$creds = '[footer_copyright] <a href="http://inside-moves.com"><b>Inside Moves</b> | </a> Theme handiwork by <a href="http://www.finchproservices.com/" title="Finch Professional Services"><b>Finch Professional Services</b></a>';
+	return $creds;
+}

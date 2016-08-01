@@ -45,6 +45,11 @@ function n8f_home_do_featured() {
 			'after'  => '</aside>',
 		) );
 
+		genesis_widget_area( 'home-featured-trailer', array(
+			'before' => '<main id="home-featured-trailer" class="home-featured-full">',
+			'after'  => '</main>',
+		) );
+
 		echo '</section><!-- end home-featured-halves --></div><!-- end wrap --></section><!-- end home-featured -->';
 	}
 }
@@ -74,6 +79,15 @@ function n8f_home_do_middle() {
 		) );
 
 		echo '</div><!-- end wrap --></section><!-- end home-middle -->';
+
+		echo '<section id="home-reviews" class="clearfix"><div class="wrap">';
+
+		genesis_widget_area( 'home-reviews', array(
+			'before' => '<div class="home-featured-full widget-area">',
+			'after'  => '</div>',
+		) );
+
+		echo '</div><!-- end wrap --></section><!-- end home-reviews-->';
 	}
 }
 
